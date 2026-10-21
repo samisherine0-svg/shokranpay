@@ -1,0 +1,85 @@
+buildscript {
+    ext.kotlin_version = '1.9.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    subprojects { project ->
+        project.afterEvaluate {
+            if (project.hasProperty("android")) {
+                // 1. إجبار المكتبات على إصدار SDK حديث متوافق مع Java 17
+                project.android.compileSdkVersion 36
+                if (project.android.hasProperty("defaultConfig")) {
+                    project.android.defaultConfig.targetSdkVersion 36
+                }
+
+                // 2. حقن الـ namespace توماتيك لو ناقص
+                if (project.android.namespace == null) {
+                    def cleanName = project.name.replaceAll(/[^a-zA-Z0-9_]/, "").toLowerCase()
+                    project.android.namespace = "com.patched.${cleanName}"
+                }
+
+                // 3. الحل السحري: حذف الـ package="..." القديم من ملف الـ AndroidManifest لمنع انهيار الـ Build
+                def manifestFile = project.file("src/main/AndroidManifest.xml")
+                if (manifestFile.exists()) {
+                    def content = manifestFile.text
+                    // السطر ده بيمسح كلمة package بداخل تاغ <manifest ... > بالكامل
+                    if (content.contains("package=")) {
+                        content = content.replaceAll(/package="[^"]*"/, "")
+                        manifestFile.text = content
+                    }
+                }
+            }
+
+            // 4. حل مشكلة إصدار الكوتلن القديم للمكتبات
+            if (project.plugins.hasPlugin('kotlin-android') || project.plugins.hasPlugin('kotlin')) {
+                project.buildscript.configurations.all {
+                    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+                        if (details.requested.group == 'org.jetbrains.kotlin') {
+                            details.useVersion '1.9.20'
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
+                }
+            }
+        }
+
+        project.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+            kotlinOptions {
+                jvmTarget = "17"
+            }
+        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="release" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleRelease" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileReleaseSources" />
+        <afterSyncTasks>
+          <task>generateReleaseSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/bluetooth_thermal_printer-0.0.5/android/src/main/res;file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/bluetooth_thermal_printer-0.0.5/android/src/release/res;file://$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/generated/res/rs/release;file://$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/generated/res/resValues/release" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="5" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <flagArguments>
+            <flagArg name="noStdlib" arg="true" />
+          </flagArguments>
+          <stringArguments>
+            <stringArg name="classpath">
+              <args>
+                <arg>$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/intermediates/compile_library_classes_jar/release/classes.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/e324125f211d8757ef0c9c46a8f85eb7/transformed/jetified-flutter_embedding_release-1.0.0-248290d6d50a1bf1a6a246544347c03acda867a5.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/9892a5f134baf9c2b32138d0c42ab2a1/transformed/jetified-window-java-1.0.0-beta04-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/b79ffa2e8a9eb7fcedc2e6a855c49d8d/transformed/jetified-window-1.0.0-beta04-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/4255ee5a54f9b82df03a75d3fb1a0d57/transformed/jetified-kotlinx-coroutines-android-1.5.2.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/18ae5616b453f4f4fc078294186f2a17/transformed/jetified-kotlinx-coroutines-core-jvm-1.5.2.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/934c310e1f42c13bc5377e6fb658efb1/transformed/jetified-kotlin-stdlib-jdk8-1.5.30.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/a34aa0fba0aa341a97612077f0282b87/transformed/jetified-kotlin-stdlib-jdk7-1.5.30.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/10acae63cef350e24e118f00832b6ee6/transformed/fragment-1.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/044f0dfcee0ca1463d347b10c1e5d38a/transformed/viewpager-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/409ecee3bd840f1b880be4be07d76dde/transformed/loader-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/69f38e29e87335650c5f4c4106529e61/transformed/jetified-activity-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/d1023fbe7c77cd9696998e1f21e8b0ca/transformed/customview-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/f205b293b17ff38173d9caeef84b1dfc/transformed/core-1.6.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/361cb0760c3f8167b9496f148068e162/transformed/lifecycle-runtime-2.2.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/f933c9f11bec52b523e037f3f0ba0bd8/transformed/jetified-savedstate-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/222b91f5b353b39a59ba85686c3417a5/transformed/lifecycle-livedata-2.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/11577fb5e826609cafd8bbcde0a6bdf9/transformed/lifecycle-livedata-core-2.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/dd4bed5c3d0bb3aabbcbd49e1caab3d7/transformed/core-runtime-2.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/3b2e62aa1d4e5a36823449e3bc9253b2/transformed/versionedparcelable-1.1.1-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/2d3b0738f394e44e5c37dc7b003310c7/transformed/lifecycle-viewmodel-2.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/bee23d40301ce3bb1822264883e5f65d/transformed/jetified-kotlin-stdlib-1.5.31.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/e252c8d7cb7c797baf15313c51311fb7/transformed/jetified-annotations-13.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/e96d7f7351a5f59e560df6a6590e8921/transformed/jetified-kotlin-stdlib-common-1.5.31.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/552a2329b257b25e5d8f9119ca091449/transformed/jetified-annotation-experimental-1.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/af43572c4eabcf620c5af3b10220d767/transformed/jetified-tracing-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/AppData/Local/Android/sdk/platforms/android-33/android.jar</arg>
+              </args>
+            </stringArg>
+            <stringArg name="destination" arg="$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/tmp/kotlin-classes/releaseUnitTest" />
+            <stringArg name="jvmTarget" arg="1.8" />
+            <stringArg name="moduleName" arg="bluetooth_thermal_printer_release" />
+            <stringArg name="apiVersion" arg="1.6" />
+            <stringArg name="languageVersion" arg="1.6" />
+          </stringArguments>
+          <arrayArguments>
+            <arrayArg name="friendPaths">
+              <args>
+                <arg>$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/tmp/kotlin-classes/release</arg>
+                <arg>$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/intermediates/javac/release/classes</arg>
+                <arg>$MODULE_DIR$/../../../../build/bluetooth_thermal_printer/intermediates/compile_library_classes_jar/release/classes.jar</arg>
+              </args>
+            </arrayArg>
+            <arrayArg name="pluginClasspaths" />
+            <arrayArg name="pluginOptions" />
+          </arrayArguments>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>
